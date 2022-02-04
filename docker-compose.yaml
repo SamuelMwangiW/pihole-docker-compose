@@ -13,11 +13,10 @@ services:
       - "8080:80/tcp"
     volumes:
       - pihole_data:/etc/pihole/
-      - ./dnsmasq:/etc/dnsmasq.d/
+      - ./data/dnsmasq:/etc/dnsmasq.d/
     environment:
       TZ: Africa/Nairobi
       WEBPASSWORD: secret
-      DNSSEC: true
-      PIHOLE_DNS_: 8.8.8.8;5.11.11.5;5.11.11.11;8.8.4.4;1.1.1.1;1.0.0.1;9.9.9.9;149.112.112.112
+      PIHOLE_DNS_: 8.8.8.8;8.8.4.4
 volumes:
   pihole_data:
