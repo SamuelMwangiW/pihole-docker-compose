@@ -18,6 +18,11 @@ services:
     environment:
       TZ: Africa/Nairobi
       WEBPASSWORD: secret
-      PIHOLE_DNS_: 8.8.8.8;8.8.4.4;9.9.9.9;9.9.9.11;5.11.11.11;5.11.11.5;149.112.112.112;1.1.1.1;1.0.0.1
+      PIHOLE_DNS_: unbound
+    depends_on:
+      - unbound
+  unbound:
+    restart: always
+    image: tiredofit/unbound:latest
 volumes:
   pihole_data:
