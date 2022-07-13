@@ -14,7 +14,7 @@ services:
     volumes:
       - pihole_data:/etc/pihole/
       - ./data/dnsmasq:/etc/dnsmasq.d/
-      - ./data/logs/pihole.log:/var/log/pihole.log
+      - ./data/logs:/var/log/pihole/
     environment:
       TZ: "${TIMEZONE}"
       WEBPASSWORD: "${WEBPASSWORD}"
