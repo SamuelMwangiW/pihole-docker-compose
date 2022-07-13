@@ -16,8 +16,8 @@ services:
       - ./data/dnsmasq:/etc/dnsmasq.d/
       - ./data/logs/pihole.log:/var/log/pihole.log
     environment:
-      TZ: Africa/Nairobi
-      WEBPASSWORD: secret
+      TZ: "${TIMEZONE}"
+      WEBPASSWORD: "${WEBPASSWORD}"
       PIHOLE_DNS_: unbound
     depends_on:
       - unbound
