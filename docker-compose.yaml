@@ -3,7 +3,6 @@ version: "3"
 services:
   pihole:
     image: pihole/pihole:latest
-    container_name: pihole
     restart: always
     ports:
       - "53:53/tcp"
