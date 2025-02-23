@@ -12,7 +12,7 @@ cp .env.example .env
 Update the `TIMEZONE` with your desired timezone and `WEBPASSWORD` with a secure😉 one
 
 ## Dashboard
-The pi-hole dashboard is accessible via port `8053` by default as `http://pi.hole:8053`, if you wish to use a different port, kindly update [docker-compose.yaml](docker-compose.yaml#L13)
+The pi-hole dashboard is accessible via port `8053` by default as `http://localhost:8053`, if you wish to use a different port, kindly update [docker-compose.yaml](docker-compose.yaml#L8)
 
 ## Running
 ```bash
